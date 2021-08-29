@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" onclick="changeImage()" src="./images/lightoff.gif" alt="" width="100" height="180">
+    <input type="button" onclick="ConfirmDelete()" name="Delete" value="Delete">
+    <h1>EVENT SAMPLES</h1>
+    <input type="text" value="" onblur="hideStyle(this)" onfocus="setStyle(this)" />
+    <input type="button" value="Focus me" onfocus="setStyle(this)" />
+    <input type="button" onclick="displayMessage()" value="Click me" />
+</body>
+<script>
+    function changeImage(){
+        let image = document.querySelector("#myImage");
+        if (image.src.match('lighton')){
+            image.src = 'images/lightoff.gif'
+        } else {
+            image.src = 'images/lighton.gif'
+        }
+    }
+
+    function ConfirmDelete(){
+        let name = confirm('ARE YOU SURE TO DELETE THIS ITEM?');
+        alert('You select: ' + name);
+    }
+    function displayMessage(){
+        alert('Hello event handling');
+    }
+    function setStyle(element){
+        element.style.backgroundColor = 'yellow';
+    }
+    function hideStyle(element){
+        element.style.backgroundColor = '#FFF';
+    }
+    let text = "2 + 2 +1";
+    let m = eval(text);
+    console.log(m);
+
+    let x = 9;
+    let x1 = isNaN(x);
+    console.log(x1)
+
+    // let fullName = prompt("Moi ban nhap ho va ten");
+    // console.log(fullName);
+</script>
+</html>

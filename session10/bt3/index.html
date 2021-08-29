@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 3 - Checkout</title>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <style>
+        .container{
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+        }
+        .myblock{
+            display: flex;
+            
+            padding: 1rem;
+            justify-content: space-evenly;
+        }
+        .form-control {
+            margin: 12px 0;
+            font-size: 1rem;
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .stateandzip{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .zip {
+            margin-left: 10px;
+        }
+        .expyearandcvv{
+            display: flex;
+        }
+        .submit-button{
+            background-color: #999;
+            color: #fff;
+            width: 100%;
+            font-size: 1rem;
+            padding: 1rem;
+            margin: 12px 0;
+        }
+        .footer{
+            margin: 0 52px 0 82px;
+            padding-bottom: 1rem;
+        }
+        .bank{
+            font-size: 32px;
+            margin-bottom: 44px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Checkout Form</h1>
+    <div class="container">
+            <form action="">
+                <div class="myblock">
+                <div class="left">
+                    <h3>Building Address</h3>
+                    <label for="name"><span class="iconify" data-icon="carbon:user-filled"></span> Full Name</label>
+                    <input name="name" type="text" class="form-control" placeholder="Jonh M. Doe">
+                    <label for=""><span class="iconify" data-icon="ic:baseline-email"></span> Email</label>
+                    <input type="email" class="form-control" placeholder="john@example.com">
+                    <label for=""><span class="iconify" data-icon="fa:address-card-o"></span> Address</label>
+                    <input type="text" class="form-control" placeholder="542 W. 15th Street">
+                    <label for=""><span class="iconify" data-icon="fluent:building-bank-20-filled"></span> City</label>
+                    <input type="text" class="form-control" placeholder="New York">
+                    <div class="stateandzip">
+                        <div class="state">
+                            <label for="">State</label>
+                            <input type="text" class="form-control" placeholder="NY">
+                        </div>
+                        <div class="zip">
+                            <label for="">Zip</label>
+                            <input type="number" class="form-control" placeholder="10001">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3>Payment</h3>
+                    <label for="">Accepted Card</label>
+                    <div class="bank">
+                        <span class="iconify" data-icon="fa:cc-visa"></span>
+                        <span class="iconify" data-icon="brandico:mastercard"></span>
+                        <span class="iconify" data-icon="logos:mastercard"></span>
+                    </div>
+                    
+                    <label for="">Name on card</label>
+                    <input type="text" class="form-control" placeholder="John More Doe">
+                    <label for="">Credit card number</label>
+                    <input type="number" class="form-control" placeholder="1111-2222-3333-4444">
+                    <label for="">Exp Month</label>
+                    <input type="text" class="form-control" placeholder="September">
+                    <div class="expyearandcvv">
+                        <div class="expyear">
+                            <label for="">Exp Year</label>
+                            <input type="text" class="form-control" placeholder="2018">
+                        </div>
+                        <div class="cvv">
+                            <label for="">CVV</label>
+                            <input type="number" class="form-control" placeholder="352">
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+            <div class="footer">
+                <input type="checkbox" checked>
+                <label for="">Shipping address same as billing</label>
+                <input type="button" class="submit-button" value="Continue to checkout">
+            </div>
+            </form>
+    </div>
+</body>
+</html>
